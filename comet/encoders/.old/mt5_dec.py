@@ -13,20 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 r"""
-BERT Encoder
+mT5 Encoder
 ==============
-    Pretrained BERT encoder from Hugging Face.
+    Pretrained mT5 from Hugging Face.
 """
 from typing import Dict, Optional
 
 import torch
-from transformers import BertConfig, BertModel, BertTokenizerFast
+from transformers import T5ForConditionalGeneration
+from transformers import T5TokenizerFast, T5Config
 
 from comet.encoders.base import Encoder
 
 
-class BERTEncoder(Encoder):
-    """BERT encoder.
+class MeTric5EncoderDecoder(Encoder):
+    """mT5 encoder.
 
     Args:
         pretrained_model (str): Pretrained model from hugging face.
@@ -38,16 +39,16 @@ class BERTEncoder(Encoder):
         self, pretrained_model: str, load_pretrained_weights: bool = True
     ) -> None:
         super().__init__()
-        self.tokenizer = BertTokenizerFast.from_pretrained(
+        self.tokenizer = T5TokenizerFast.from_pretrained(
             pretrained_model, use_fast=True
         )
         if load_pretrained_weights:
-            self.model = BertModel.from_pretrained(
-                pretrained_model, add_pooling_layer=False
+            self.model = T5ForConditionalGeneration.from_pretrained(
+                pretrained_model#, add_pooling_layer=False
             )
         else:
-            self.model = BertModel(
-                BertConfig.from_pretrained(pretrained_model), add_pooling_layer=False
+            self.model = T5ForConditionalGeneration(
+                T5Config.from_pretrained(pretrained_model)#, add_pooling_layer=False
             )
         self.model.encoder.output_hidden_states = True
 
@@ -59,7 +60,7 @@ class BERTEncoder(Encoder):
     @property
     def max_positions(self) -> int:
         """Max number of tokens the encoder handles."""
-        return self.model.config.max_position_embeddings - 2
+        return 1024
 
     @property
     def num_layers(self) -> int:
@@ -69,7 +70,7 @@ class BERTEncoder(Encoder):
     @property
     def size_separator(self) -> int:
         """Size of the seperator.
-        E.g: For BERT is just 1 ([SEP]) but models such as XLM-R use 2 (</s></s>).
+        E.g: For mT5 is just 1 ([SEP]) but models such as XLM-R use 2 (</s></s>).
 
         Returns:
             int: Number of tokens used between two segments.
@@ -81,27 +82,30 @@ class BERTEncoder(Encoder):
         """Whether or not the model uses token type ids to differentiate sentences.
 
         Returns:
-            bool: True for models that use token_type_ids such as BERT.
+            bool: True for models that use token_type_ids such as mT5.
         """
-        return True
+        return False
 
     @classmethod
     def from_pretrained(
         cls, pretrained_model: str, load_pretrained_weights: bool = True
-    ) -> Encoder:
+    ):
         """Function that loads a pretrained encoder from Hugging Face.
+
         Args:
             pretrained_model (str):Name of the pretrain model to be loaded.
             load_pretrained_weights (bool): If set to True loads the pretrained weights
                 from Hugging Face
+
         Returns:
             Encoder: XLMREncoder object.
         """
-        return BERTEncoder(pretrained_model, load_pretrained_weights)
+        #mT5EncoderDecoder = cls(pretrained_model, load_pretrained_weights)
+        return MeTric5EncoderDecoder(pretrained_model, load_pretrained_weights)
 
     def freeze_embeddings(self) -> None:
         """Frezees the embedding layer."""
-        for param in self.model.embeddings.parameters():
+        for param in self.model.shared.parameters():
             param.requires_grad = False
 
     def layerwise_lr(self, lr: float, decay: float):
@@ -114,29 +118,23 @@ class BERTEncoder(Encoder):
         Returns:
             list: List of model parameters for all layers and the corresponding lr.
         """
-        # # Last layer keeps LR
+        # # Embedding Layer
         # opt_parameters = [
         #     {
-        #         "params": self.model.encoder.layer[-1].parameters(),
-        #         "lr": lr,
-        #     }
-        # ]
-        # # Decay at each layer.
-        # for i in range(2, self.num_layers):
-        #     opt_parameters.append(
-        #         {
-        #             "params": self.model.encoder.layer[-i].parameters(),
-        #             "lr": lr * decay ** (i - 1),
-        #         }
-        #     )
-        # # Embedding Layer
-        # opt_parameters.append(
-        #     {
-        #         "params": self.model.embeddings.parameters(),
+        #         "params": self.model.shared.parameters(),
         #         "lr": lr * decay ** (self.num_layers),
         #     }
-        # )
-        return [{ "params": self.model.parameters(), "lr": lr }]
+        # ]
+        # # All layers
+        # opt_parameters += [
+        #     {
+        #         "params": self.model.encoder.block[i].parameters(),
+        #         "lr": lr * decay**i,
+        #     }
+        #     for i in range(self.num_layers - 2, 0, -1)
+        # ]
+        # return opt_parameters
+        return [{ "params" : self.model.parameters(), "lr" : lr}]
 
     def forward(
         self,
@@ -145,7 +143,7 @@ class BERTEncoder(Encoder):
         token_type_ids: Optional[torch.tensor] = None,
         **kwargs
     ) -> Dict[str, torch.Tensor]:
-        """BERT model forward
+        """mT5 model forward
 
         Args:
             input_ids (torch.Tensor): tokenized batch.
@@ -157,16 +155,16 @@ class BERTEncoder(Encoder):
             Dict[str, torch.Tensor]: dictionary with 'sentemb', 'wordemb', 'all_layers'
                 and 'attention_mask'.
         """
-        last_hidden_states, pooler_output, all_layers = self.model(
+        out = self.model(
             input_ids=input_ids,
-            token_type_ids=token_type_ids,
             attention_mask=attention_mask,
+            decoder_input_ids=torch.zeros(input_ids.shape[0],1,device=input_ids.device, dtype=input_ids.dtype),
             output_hidden_states=True,
-            return_dict=False,
+            return_dict=True,
         )
         return {
-            "sentemb": pooler_output,
-            "wordemb": last_hidden_states,
-            "all_layers": all_layers,
+            "sentemb": out.decoder_hidden_states[-1][:, 0, :],
+            "wordemb": out.decoder_hidden_states[-1],
+            "all_layers": out.decoder_hidden_states,
             "attention_mask": attention_mask,
         }

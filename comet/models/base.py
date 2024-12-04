@@ -118,7 +118,7 @@ class CometModel(ptl.LightningModule, metaclass=abc.ABCMeta):
         self.encoder = str2encoder[self.hparams.encoder_model].from_pretrained(
             self.hparams.pretrained_model, load_pretrained_weights
         )
-
+        print(dir(self))
         self.epoch_nr = 0
         if self.hparams.layer == "mix":
             self.layerwise_attention = LayerwiseAttention(
@@ -246,6 +246,7 @@ class CometModel(ptl.LightningModule, metaclass=abc.ABCMeta):
         if self.epoch_nr >= self.nr_frozen_epochs and self._frozen:
             self.unfreeze_encoder()
             self._frozen = False
+            #ptl.callbacks.ModelSummary(self)
 
     def set_embedding_cache(self):
         """Function that when called turns embedding caching on."""

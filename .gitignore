@@ -1,8 +1,13 @@
+_outputs/
+_logs/
+_models/
+_data/
 *.pkl
 *DS_Store 
 data/
 lightning_logs/
 wmt21/
+./tmp
 
 .vscode
 # Byte-compiled / optimized / DLL files

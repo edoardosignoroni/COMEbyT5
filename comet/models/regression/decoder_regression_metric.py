@@ -14,7 +14,7 @@
 # limitations under the License.
 
 r"""
-RegressionMetric
+DecoderRegressionMetric
 ================
     Regression Metric that learns to predict a quality assessment by looking
     at source, translation and reference.
@@ -25,16 +25,14 @@ import pandas as pd
 import torch
 from torch import nn
 from transformers.optimization import Adafactor, get_constant_schedule_with_warmup
-from torch_optimizer import Lamb
 
 from comet.models.base import CometModel
 from comet.models.metrics import RegressionMetrics
 from comet.models.utils import Prediction, Target
 from comet.modules import FeedForward
-#from comet.encoders.mt5_dec import MeTric5EncoderDecoder
 
 
-class RegressionMetric(CometModel):
+class DecoderRegressionMetric(CometModel):
     """RegressionMetric:
 
     Args:
@@ -120,7 +118,6 @@ class RegressionMetric(CometModel):
             load_pretrained_weights=load_pretrained_weights
         )
         self.save_hyperparameters()
-         
         self.estimator = FeedForward(
             in_dim=self.encoder.output_units * 6,
             hidden_sizes=self.hparams.hidden_sizes,
@@ -168,11 +165,6 @@ class RegressionMetric(CometModel):
                 relative_step=False,
                 scale_parameter=False,
             )
-        elif self.hparams.optimizer == "Lamb":
-            optimizer = Lamb(
-                params,
-                lr=self.hparams.learning_rate,
-            )
         else:
             optimizer = torch.optim.AdamW(params, lr=self.hparams.learning_rate)
 
@@ -203,23 +195,13 @@ class RegressionMetric(CometModel):
             Model inputs and depending on the 'stage' training labels/targets.
         """
         inputs = {k: [str(dic[k]) for dic in sample] for k in sample[0] if k != "score"}
-        src_inputs = self.encoder.prepare_sample(inputs["src"])
+        #src_inputs = self.encoder.prepare_sample(inputs["src"])
         mt_inputs = self.encoder.prepare_sample(inputs["mt"])
         ref_inputs = self.encoder.prepare_sample(inputs["ref"])
-
-        ### ADDED METRICX-LIKE PREPROCESSING FOR MT5
-        if 1 != 1: #always false, goes into else. LEAVE HERE UNTIL FIXED
-        #if self.encoder.isinstance(MeTric5EncoderDecoder):
-            #src_inputs = { 0 for k, v in src_inputs.items()}
-            mt_inputs = {"candidate:" + k: v for k, v in mt_inputs.items()}
-            ref_inputs = {"reference" + k: v for k, v in ref_inputs.items()}
-            model_inputs = {**mt_inputs, **ref_inputs}
-        else:
-            src_inputs = {"src_" + k: v for k, v in src_inputs.items()}
-            mt_inputs = {"mt_" + k: v for k, v in mt_inputs.items()}
-            ref_inputs = {"ref_" + k: v for k, v in ref_inputs.items()}
-            model_inputs = {**src_inputs, **mt_inputs, **ref_inputs}
-        ###
+        
+        mt_inputs = {"candidate:" + k: v for k, v in mt_inputs.items()}
+        ref_inputs = {"reference" + k: v for k, v in ref_inputs.items()}
+        model_inputs = {**mt_inputs, **ref_inputs}
 
         if stage == "predict":
             return model_inputs
@@ -249,33 +231,22 @@ class RegressionMetric(CometModel):
         Return:
             Prediction object with sentence scores.
         """
-        if 1 != 1: #always false, goes into else. LEAVE HERE UNTIL FIXED
-        #if self.encoder.isinstance(MeTric5EncoderDecoder):
-            diff_ref = torch.abs(mt_sentemb - ref_sentemb)
-            prod_ref = mt_sentemb * ref_sentemb
-            
-            embedded_sequences = torch.cat(
-                (mt_sentemb, ref_sentemb, prod_ref, diff_ref),
-                dim=1,
-            )
+        diff_ref = torch.abs(mt_sentemb - ref_sentemb)
+        #diff_src = torch.abs(mt_sentemb - src_sentemb)
 
-        else:
-            diff_ref = torch.abs(mt_sentemb - ref_sentemb)
-            diff_src = torch.abs(mt_sentemb - src_sentemb)
+        prod_ref = mt_sentemb * ref_sentemb
+        #prod_src = mt_sentemb * src_sentemb
 
-            prod_ref = mt_sentemb * ref_sentemb
-            prod_src = mt_sentemb * src_sentemb
-
-            embedded_sequences = torch.cat(
-                (mt_sentemb, ref_sentemb, prod_ref, diff_ref, prod_src, diff_src),
-                dim=1,
-            )
+        embedded_sequences = torch.cat(
+            (mt_sentemb, ref_sentemb, prod_ref, diff_ref),
+            dim=1,
+        )
         return Prediction(score=self.estimator(embedded_sequences).view(-1))
 
     def forward(
         self,
-        src_input_ids: torch.tensor,
-        src_attention_mask: torch.tensor,
+        #src_input_ids: torch.tensor,
+        #src_attention_mask: torch.tensor,
         mt_input_ids: torch.tensor,
         mt_attention_mask: torch.tensor,
         ref_input_ids: torch.tensor,
@@ -295,18 +266,10 @@ class RegressionMetric(CometModel):
         Return:
             Prediction object with translation scores.
         """
-        if 1 != 1: #always false, goes into else. LEAVE HERE UNTIL FIXED
-        #if self.encoder.isinstance(MeTric5EncoderDecoder):
-            ref_sentemb = self.get_sentence_embedding(ref_input_ids, ref_attention_mask)
-            mt_sentemb = self.get_sentence_embedding(mt_input_ids, mt_attention_mask)
-            estimation = self.estimate(mt_sentemb, ref_sentemb)
-        else:
-            src_sentemb = self.get_sentence_embedding(src_input_ids, src_attention_mask)
-            ref_sentemb = self.get_sentence_embedding(ref_input_ids, ref_attention_mask)
-            mt_sentemb = self.get_sentence_embedding(mt_input_ids, mt_attention_mask)
-            estimation = self.estimate(src_sentemb, mt_sentemb, ref_sentemb)
-        
-        return estimation
+        #src_sentemb = self.get_sentence_embedding(src_input_ids, src_attention_mask)
+        ref_sentemb = self.get_sentence_embedding(ref_input_ids, ref_attention_mask)
+        mt_sentemb = self.get_sentence_embedding(mt_input_ids, mt_attention_mask)
+        return self.estimate(mt_sentemb, ref_sentemb)
 
     def read_training_data(self, path: str) -> List[dict]:
         """Method that reads the training data (a csv file) and returns a list of
@@ -316,19 +279,11 @@ class RegressionMetric(CometModel):
             List[dict]: List with input samples in the form of a dict
         """
         df = pd.read_csv(path)
-        if 1 != 1: #always false, goes into else. LEAVE HERE UNTIL FIXED
-        #if self.encoder.isinstance(MeTric5EncoderDecoder):
-            df = df[["mt", "ref", "score"]]
-            df["mt"] = df["mt"].astype(str)
-            df["ref"] = df["ref"].astype(str)
-            df["score"] = df["score"].astype("float16")
-        else:
-            df = df[["src", "mt", "ref", "score"]]
-            df["src"] = df["src"].astype(str)
-            df["mt"] = df["mt"].astype(str)
-            df["ref"] = df["ref"].astype(str)
-            df["score"] = df["score"].astype("float16")
-        
+        df = df[["src", "mt", "ref", "score"]]
+        #df["src"] = df["src"].astype(str)
+        df["mt"] = df["mt"].astype(str)
+        df["ref"] = df["ref"].astype(str)
+        df["score"] = df["score"].astype("float16")
         return df.to_dict("records")
 
     def read_validation_data(self, path: str) -> List[dict]:
@@ -339,28 +294,15 @@ class RegressionMetric(CometModel):
             List[dict]: List with input samples in the form of a dict
         """
         df = pd.read_csv(path)
-        if 1 != 1: #always false, goes into else. LEAVE HERE UNTIL FIXED
-        #if self.encoder.isinstance(MeTric5EncoderDecoder):
-            columns = ["mt", "ref", "score"]
-            # If system in columns we will use this to calculate system-level accuracy
-            if "system" in df.columns:
-                columns.append("system")
-                df["system"] = df["system"].astype(str)
+        columns = ["src", "mt", "ref", "score"]
+        # If system in columns we will use this to calculate system-level accuracy
+        if "system" in df.columns:
+            columns.append("system")
+            df["system"] = df["system"].astype(str)
 
-            df = df[columns]
-            df["score"] = df["score"].astype("float16")
-            df["mt"] = df["mt"].astype(str)
-            df["ref"] = df["ref"].astype(str)
-        else:
-            columns = ["src", "mt", "ref", "score"]
-            # If system in columns we will use this to calculate system-level accuracy
-            if "system" in df.columns:
-                columns.append("system")
-                df["system"] = df["system"].astype(str)
-
-            df = df[columns]
-            df["score"] = df["score"].astype("float16")
-            df["src"] = df["src"].astype(str)
-            df["mt"] = df["mt"].astype(str)
-            df["ref"] = df["ref"].astype(str)
+        df = df[columns]
+        df["score"] = df["score"].astype("float16")
+        #df["src"] = df["src"].astype(str)
+        df["mt"] = df["mt"].astype(str)
+        df["ref"] = df["ref"].astype(str)
         return df.to_dict("records")

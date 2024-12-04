@@ -78,7 +78,7 @@ def load_from_checkpoint(
     if not checkpoint_path.is_file():
         raise Exception(f"Invalid checkpoint path: {checkpoint_path}")
 
-    parent_folder = checkpoint_path.parents[1]  # .parent.parent
+    parent_folder = checkpoint_path.parents[0]  # .parent.parent
     hparams_file = parent_folder / "hparams.yaml"
 
     if hparams_file.is_file():

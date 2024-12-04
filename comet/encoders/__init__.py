@@ -16,6 +16,12 @@ from .minilm import MiniLMEncoder
 from .xlmr import XLMREncoder
 from .rembert import RemBERTEncoder
 from .xlmr_xl import XLMRXLEncoder
+# from .mt5 import MeTric5Encoder
+# from .byt5 import ByMeTric5Encoder
+# from .mt5_dec import MeTric5EncoderDecoder
+from .canine import CanineEncoderForMetric
+from .mbert import MBertEncoderForMetric
+from .char_bert import CharBERTEncoder
 
 str2encoder = {
     "BERT": BERTEncoder,
@@ -23,4 +29,10 @@ str2encoder = {
     "MiniLM": MiniLMEncoder,
     "XLM-RoBERTa-XL": XLMRXLEncoder,
     "RemBERT": RemBERTEncoder,
+    # "mT5": MeTric5Encoder,
+    # "byT5" : ByMeTric5Encoder,
+    # "mT5_encdec" : MeTric5EncoderDecoder,
+    "Canine" : CanineEncoderForMetric,
+    "mbert" : MBertEncoderForMetric,
+    "charBERT" : CharBERTEncoder
 }

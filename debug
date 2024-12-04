@@ -1,0 +1,985 @@
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+Using unk_token, but it is not set yet.
+LOADING DATA FROM HUGGINGFACE...
+LOADING MODELS...
+['CHECKPOINT_HYPER_PARAMS_KEY', 'CHECKPOINT_HYPER_PARAMS_NAME', 'CHECKPOINT_HYPER_PARAMS_TYPE', 'T_destination', '_DeviceDtypeModuleMixin__update_properties', '_LightningModule__check_allowed', '_LightningModule__check_not_nested', '_LightningModule__to_tensor', '__abstractmethods__', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jit_unused_properties__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_apply', '_apply_batch_transfer_handler', '_automatic_optimization', '_backward_hooks', '_backward_pre_hooks', '_buffers', '_call_batch_hook', '_call_impl', '_compiled_call_impl', '_compiler_ctx', '_current_fx_name', '_device', '_dtype', '_example_input_array', '_fabric', '_fabric_optimizers', '_forward_hooks', '_forward_hooks_always_called', '_forward_hooks_with_kwargs', '_forward_pre_hooks', '_forward_pre_hooks_with_kwargs', '_get_backward_hooks', '_get_backward_pre_hooks', '_get_name', '_hparams', '_hparams_initial', '_hparams_name', '_is_full_backward_hook', '_jit_is_scripting', '_load_from_state_dict', '_load_state_dict_post_hooks', '_load_state_dict_pre_hooks', '_log_dict_through_fabric', '_log_hyperparams', '_maybe_warn_non_full_backward_hook', '_metric_attributes', '_modules', '_named_members', '_non_persistent_buffers_set', '_on_before_batch_transfer', '_param_requires_grad_state', '_parameters', '_register_load_state_dict_pre_hook', '_register_sharded_tensor_state_dict_hooks_if_available', '_register_state_dict_hook', '_replicate_for_data_parallel', '_save_to_state_dict', '_set_hparams', '_slow_forward', '_state_dict_hooks', '_state_dict_pre_hooks', '_to_hparams_dict', '_trainer', '_verify_is_manual_optimization', '_version', '_wrapped_call_impl', 'add_module', 'all_gather', 'allow_zero_length_dataloader_with_multiple_devices', 'apply', 'automatic_optimization', 'backward', 'bfloat16', 'buffers', 'call_super_init', 'children', 'clip_gradients', 'compile', 'compute_loss', 'compute_sentence_embedding', 'configure_callbacks', 'configure_gradient_clipping', 'configure_optimizers', 'configure_sharded_model', 'cpu', 'cuda', 'current_epoch', 'device', 'double', 'dtype', 'dump_patches', 'encoder', 'estimate', 'eval', 'example_input_array', 'extra_repr', 'fabric', 'float', 'forward', 'freeze', 'freeze_encoder', 'get_buffer', 'get_extra_state', 'get_parameter', 'get_sentence_embedding', 'get_submodule', 'global_rank', 'global_step', 'half', 'hparams', 'hparams_initial', 'init_metrics', 'ipu', 'load_from_checkpoint', 'load_state_dict', 'local_rank', 'log', 'log_dict', 'logger', 'loggers', 'loss', 'lr_scheduler_step', 'lr_schedulers', 'manual_backward', 'modules', 'named_buffers', 'named_children', 'named_modules', 'named_parameters', 'on_after_backward', 'on_after_batch_transfer', 'on_before_backward', 'on_before_batch_transfer', 'on_before_optimizer_step', 'on_before_zero_grad', 'on_fit_end', 'on_fit_start', 'on_gpu', 'on_load_checkpoint', 'on_predict_batch_end', 'on_predict_batch_start', 'on_predict_end', 'on_predict_epoch_end', 'on_predict_epoch_start', 'on_predict_model_eval', 'on_predict_start', 'on_save_checkpoint', 'on_test_batch_end', 'on_test_batch_start', 'on_test_end', 'on_test_epoch_end', 'on_test_epoch_start', 'on_test_model_eval', 'on_test_model_train', 'on_test_start', 'on_train_batch_end', 'on_train_batch_start', 'on_train_end', 'on_train_epoch_end', 'on_train_epoch_start', 'on_train_start', 'on_validation_batch_end', 'on_validation_batch_start', 'on_validation_end', 'on_validation_epoch_end', 'on_validation_epoch_start', 'on_validation_model_eval', 'on_validation_model_train', 'on_validation_start', 'optimizer_step', 'optimizer_zero_grad', 'optimizers', 'parameters', 'predict', 'predict_dataloader', 'predict_step', 'prepare_data', 'prepare_data_per_node', 'prepare_for_inference', 'prepare_sample', 'print', 'read_training_data', 'read_validation_data', 'register_backward_hook', 'register_buffer', 'register_forward_hook', 'register_forward_pre_hook', 'register_full_backward_hook', 'register_full_backward_pre_hook', 'register_load_state_dict_post_hook', 'register_module', 'register_parameter', 'register_state_dict_pre_hook', 'requires_grad_', 'requires_references', 'retrieve_sentence_embedding', 'save_hyperparameters', 'set_embedding_cache', 'set_extra_state', 'set_mc_dropout', 'setup', 'share_memory', 'state_dict', 'teardown', 'test_dataloader', 'test_step', 'to', 'to_empty', 'to_onnx', 'to_torchscript', 'toggle_optimizer', 'train', 'train_dataloader', 'trainer', 'training', 'training_step', 'transfer_batch_to_device', 'type', 'unfreeze', 'unfreeze_encoder', 'untoggle_optimizer', 'val_dataloader', 'validation_step', 'xpu', 'zero_grad']
+['CHECKPOINT_HYPER_PARAMS_KEY', 'CHECKPOINT_HYPER_PARAMS_NAME', 'CHECKPOINT_HYPER_PARAMS_TYPE', 'T_destination', '_DeviceDtypeModuleMixin__update_properties', '_LightningModule__check_allowed', '_LightningModule__check_not_nested', '_LightningModule__to_tensor', '__abstractmethods__', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jit_unused_properties__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_apply', '_apply_batch_transfer_handler', '_automatic_optimization', '_backward_hooks', '_backward_pre_hooks', '_buffers', '_call_batch_hook', '_call_impl', '_compiled_call_impl', '_compiler_ctx', '_current_fx_name', '_device', '_dtype', '_example_input_array', '_fabric', '_fabric_optimizers', '_forward_hooks', '_forward_hooks_always_called', '_forward_hooks_with_kwargs', '_forward_pre_hooks', '_forward_pre_hooks_with_kwargs', '_get_backward_hooks', '_get_backward_pre_hooks', '_get_name', '_hparams', '_hparams_initial', '_hparams_name', '_is_full_backward_hook', '_jit_is_scripting', '_load_from_state_dict', '_load_state_dict_post_hooks', '_load_state_dict_pre_hooks', '_log_dict_through_fabric', '_log_hyperparams', '_maybe_warn_non_full_backward_hook', '_metric_attributes', '_modules', '_named_members', '_non_persistent_buffers_set', '_on_before_batch_transfer', '_param_requires_grad_state', '_parameters', '_register_load_state_dict_pre_hook', '_register_sharded_tensor_state_dict_hooks_if_available', '_register_state_dict_hook', '_replicate_for_data_parallel', '_save_to_state_dict', '_set_hparams', '_slow_forward', '_state_dict_hooks', '_state_dict_pre_hooks', '_to_hparams_dict', '_trainer', '_verify_is_manual_optimization', '_version', '_wrapped_call_impl', 'add_module', 'all_gather', 'allow_zero_length_dataloader_with_multiple_devices', 'apply', 'automatic_optimization', 'backward', 'bfloat16', 'buffers', 'call_super_init', 'children', 'clip_gradients', 'compile', 'compute_loss', 'compute_sentence_embedding', 'configure_callbacks', 'configure_gradient_clipping', 'configure_optimizers', 'configure_sharded_model', 'cpu', 'cuda', 'current_epoch', 'device', 'double', 'dtype', 'dump_patches', 'encoder', 'estimate', 'eval', 'example_input_array', 'extra_repr', 'fabric', 'float', 'forward', 'freeze', 'freeze_encoder', 'get_buffer', 'get_extra_state', 'get_parameter', 'get_sentence_embedding', 'get_submodule', 'global_rank', 'global_step', 'half', 'hparams', 'hparams_initial', 'init_metrics', 'ipu', 'load_from_checkpoint', 'load_state_dict', 'local_rank', 'log', 'log_dict', 'logger', 'loggers', 'loss', 'lr_scheduler_step', 'lr_schedulers', 'manual_backward', 'modules', 'named_buffers', 'named_children', 'named_modules', 'named_parameters', 'on_after_backward', 'on_after_batch_transfer', 'on_before_backward', 'on_before_batch_transfer', 'on_before_optimizer_step', 'on_before_zero_grad', 'on_fit_end', 'on_fit_start', 'on_gpu', 'on_load_checkpoint', 'on_predict_batch_end', 'on_predict_batch_start', 'on_predict_end', 'on_predict_epoch_end', 'on_predict_epoch_start', 'on_predict_model_eval', 'on_predict_start', 'on_save_checkpoint', 'on_test_batch_end', 'on_test_batch_start', 'on_test_end', 'on_test_epoch_end', 'on_test_epoch_start', 'on_test_model_eval', 'on_test_model_train', 'on_test_start', 'on_train_batch_end', 'on_train_batch_start', 'on_train_end', 'on_train_epoch_end', 'on_train_epoch_start', 'on_train_start', 'on_validation_batch_end', 'on_validation_batch_start', 'on_validation_end', 'on_validation_epoch_end', 'on_validation_epoch_start', 'on_validation_model_eval', 'on_validation_model_train', 'on_validation_start', 'optimizer_step', 'optimizer_zero_grad', 'optimizers', 'parameters', 'predict', 'predict_dataloader', 'predict_step', 'prepare_data', 'prepare_data_per_node', 'prepare_for_inference', 'prepare_sample', 'print', 'read_training_data', 'read_validation_data', 'register_backward_hook', 'register_buffer', 'register_forward_hook', 'register_forward_pre_hook', 'register_full_backward_hook', 'register_full_backward_pre_hook', 'register_load_state_dict_post_hook', 'register_module', 'register_parameter', 'register_state_dict_pre_hook', 'requires_grad_', 'requires_references', 'retrieve_sentence_embedding', 'save_hyperparameters', 'set_embedding_cache', 'set_extra_state', 'set_mc_dropout', 'setup', 'share_memory', 'state_dict', 'teardown', 'test_dataloader', 'test_step', 'to', 'to_empty', 'to_onnx', 'to_torchscript', 'toggle_optimizer', 'train', 'train_dataloader', 'trainer', 'training', 'training_step', 'transfer_batch_to_device', 'type', 'unfreeze', 'unfreeze_encoder', 'untoggle_optimizer', 'val_dataloader', 'validation_step', 'xpu', 'zero_grad']
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+['CHECKPOINT_HYPER_PARAMS_KEY', 'CHECKPOINT_HYPER_PARAMS_NAME', 'CHECKPOINT_HYPER_PARAMS_TYPE', 'T_destination', '_DeviceDtypeModuleMixin__update_properties', '_LightningModule__check_allowed', '_LightningModule__check_not_nested', '_LightningModule__to_tensor', '__abstractmethods__', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jit_unused_properties__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_apply', '_apply_batch_transfer_handler', '_automatic_optimization', '_backward_hooks', '_backward_pre_hooks', '_buffers', '_call_batch_hook', '_call_impl', '_compiled_call_impl', '_compiler_ctx', '_current_fx_name', '_device', '_dtype', '_example_input_array', '_fabric', '_fabric_optimizers', '_forward_hooks', '_forward_hooks_always_called', '_forward_hooks_with_kwargs', '_forward_pre_hooks', '_forward_pre_hooks_with_kwargs', '_get_backward_hooks', '_get_backward_pre_hooks', '_get_name', '_hparams', '_hparams_initial', '_hparams_name', '_is_full_backward_hook', '_jit_is_scripting', '_load_from_state_dict', '_load_state_dict_post_hooks', '_load_state_dict_pre_hooks', '_log_dict_through_fabric', '_log_hyperparams', '_maybe_warn_non_full_backward_hook', '_metric_attributes', '_modules', '_named_members', '_non_persistent_buffers_set', '_on_before_batch_transfer', '_param_requires_grad_state', '_parameters', '_register_load_state_dict_pre_hook', '_register_sharded_tensor_state_dict_hooks_if_available', '_register_state_dict_hook', '_replicate_for_data_parallel', '_save_to_state_dict', '_set_hparams', '_slow_forward', '_state_dict_hooks', '_state_dict_pre_hooks', '_to_hparams_dict', '_trainer', '_verify_is_manual_optimization', '_version', '_wrapped_call_impl', 'add_module', 'all_gather', 'allow_zero_length_dataloader_with_multiple_devices', 'apply', 'automatic_optimization', 'backward', 'bfloat16', 'buffers', 'call_super_init', 'children', 'clip_gradients', 'compile', 'compute_loss', 'compute_sentence_embedding', 'configure_callbacks', 'configure_gradient_clipping', 'configure_optimizers', 'configure_sharded_model', 'cpu', 'cuda', 'current_epoch', 'device', 'double', 'dtype', 'dump_patches', 'encoder', 'estimate', 'eval', 'example_input_array', 'extra_repr', 'fabric', 'float', 'forward', 'freeze', 'freeze_encoder', 'get_buffer', 'get_extra_state', 'get_parameter', 'get_sentence_embedding', 'get_submodule', 'global_rank', 'global_step', 'half', 'hparams', 'hparams_initial', 'init_metrics', 'ipu', 'load_from_checkpoint', 'load_state_dict', 'local_rank', 'log', 'log_dict', 'logger', 'loggers', 'loss', 'lr_scheduler_step', 'lr_schedulers', 'manual_backward', 'modules', 'named_buffers', 'named_children', 'named_modules', 'named_parameters', 'on_after_backward', 'on_after_batch_transfer', 'on_before_backward', 'on_before_batch_transfer', 'on_before_optimizer_step', 'on_before_zero_grad', 'on_fit_end', 'on_fit_start', 'on_gpu', 'on_load_checkpoint', 'on_predict_batch_end', 'on_predict_batch_start', 'on_predict_end', 'on_predict_epoch_end', 'on_predict_epoch_start', 'on_predict_model_eval', 'on_predict_start', 'on_save_checkpoint', 'on_test_batch_end', 'on_test_batch_start', 'on_test_end', 'on_test_epoch_end', 'on_test_epoch_start', 'on_test_model_eval', 'on_test_model_train', 'on_test_start', 'on_train_batch_end', 'on_train_batch_start', 'on_train_end', 'on_train_epoch_end', 'on_train_epoch_start', 'on_train_start', 'on_validation_batch_end', 'on_validation_batch_start', 'on_validation_end', 'on_validation_epoch_end', 'on_validation_epoch_start', 'on_validation_model_eval', 'on_validation_model_train', 'on_validation_start', 'optimizer_step', 'optimizer_zero_grad', 'optimizers', 'parameters', 'predict', 'predict_dataloader', 'predict_step', 'prepare_data', 'prepare_data_per_node', 'prepare_for_inference', 'prepare_sample', 'print', 'read_training_data', 'read_validation_data', 'register_backward_hook', 'register_buffer', 'register_forward_hook', 'register_forward_pre_hook', 'register_full_backward_hook', 'register_full_backward_pre_hook', 'register_load_state_dict_post_hook', 'register_module', 'register_parameter', 'register_state_dict_pre_hook', 'requires_grad_', 'requires_references', 'retrieve_sentence_embedding', 'save_hyperparameters', 'set_embedding_cache', 'set_extra_state', 'set_mc_dropout', 'setup', 'share_memory', 'state_dict', 'teardown', 'test_dataloader', 'test_step', 'to', 'to_empty', 'to_onnx', 'to_torchscript', 'toggle_optimizer', 'train', 'train_dataloader', 'trainer', 'training', 'training_step', 'transfer_batch_to_device', 'type', 'unfreeze', 'unfreeze_encoder', 'untoggle_optimizer', 'val_dataloader', 'validation_step', 'xpu', 'zero_grad']
+['CHECKPOINT_HYPER_PARAMS_KEY', 'CHECKPOINT_HYPER_PARAMS_NAME', 'CHECKPOINT_HYPER_PARAMS_TYPE', 'T_destination', '_DeviceDtypeModuleMixin__update_properties', '_LightningModule__check_allowed', '_LightningModule__check_not_nested', '_LightningModule__to_tensor', '__abstractmethods__', '__annotations__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__jit_unused_properties__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', '_apply', '_apply_batch_transfer_handler', '_automatic_optimization', '_backward_hooks', '_backward_pre_hooks', '_buffers', '_call_batch_hook', '_call_impl', '_compiled_call_impl', '_compiler_ctx', '_current_fx_name', '_device', '_dtype', '_example_input_array', '_fabric', '_fabric_optimizers', '_forward_hooks', '_forward_hooks_always_called', '_forward_hooks_with_kwargs', '_forward_pre_hooks', '_forward_pre_hooks_with_kwargs', '_get_backward_hooks', '_get_backward_pre_hooks', '_get_name', '_hparams', '_hparams_initial', '_hparams_name', '_is_full_backward_hook', '_jit_is_scripting', '_load_from_state_dict', '_load_state_dict_post_hooks', '_load_state_dict_pre_hooks', '_log_dict_through_fabric', '_log_hyperparams', '_maybe_warn_non_full_backward_hook', '_metric_attributes', '_modules', '_named_members', '_non_persistent_buffers_set', '_on_before_batch_transfer', '_param_requires_grad_state', '_parameters', '_register_load_state_dict_pre_hook', '_register_sharded_tensor_state_dict_hooks_if_available', '_register_state_dict_hook', '_replicate_for_data_parallel', '_save_to_state_dict', '_set_hparams', '_slow_forward', '_state_dict_hooks', '_state_dict_pre_hooks', '_to_hparams_dict', '_trainer', '_verify_is_manual_optimization', '_version', '_wrapped_call_impl', 'add_module', 'all_gather', 'allow_zero_length_dataloader_with_multiple_devices', 'apply', 'automatic_optimization', 'backward', 'bfloat16', 'buffers', 'call_super_init', 'children', 'clip_gradients', 'compile', 'compute_loss', 'compute_sentence_embedding', 'configure_callbacks', 'configure_gradient_clipping', 'configure_optimizers', 'configure_sharded_model', 'cpu', 'cuda', 'current_epoch', 'device', 'double', 'dtype', 'dump_patches', 'encoder', 'estimate', 'eval', 'example_input_array', 'extra_repr', 'fabric', 'float', 'forward', 'freeze', 'freeze_encoder', 'get_buffer', 'get_extra_state', 'get_parameter', 'get_sentence_embedding', 'get_submodule', 'global_rank', 'global_step', 'half', 'hparams', 'hparams_initial', 'init_metrics', 'ipu', 'load_from_checkpoint', 'load_state_dict', 'local_rank', 'log', 'log_dict', 'logger', 'loggers', 'loss', 'lr_scheduler_step', 'lr_schedulers', 'manual_backward', 'modules', 'named_buffers', 'named_children', 'named_modules', 'named_parameters', 'on_after_backward', 'on_after_batch_transfer', 'on_before_backward', 'on_before_batch_transfer', 'on_before_optimizer_step', 'on_before_zero_grad', 'on_fit_end', 'on_fit_start', 'on_gpu', 'on_load_checkpoint', 'on_predict_batch_end', 'on_predict_batch_start', 'on_predict_end', 'on_predict_epoch_end', 'on_predict_epoch_start', 'on_predict_model_eval', 'on_predict_start', 'on_save_checkpoint', 'on_test_batch_end', 'on_test_batch_start', 'on_test_end', 'on_test_epoch_end', 'on_test_epoch_start', 'on_test_model_eval', 'on_test_model_train', 'on_test_start', 'on_train_batch_end', 'on_train_batch_start', 'on_train_end', 'on_train_epoch_end', 'on_train_epoch_start', 'on_train_start', 'on_validation_batch_end', 'on_validation_batch_start', 'on_validation_end', 'on_validation_epoch_end', 'on_validation_epoch_start', 'on_validation_model_eval', 'on_validation_model_train', 'on_validation_start', 'optimizer_step', 'optimizer_zero_grad', 'optimizers', 'parameters', 'predict', 'predict_dataloader', 'predict_step', 'prepare_data', 'prepare_data_per_node', 'prepare_for_inference', 'prepare_sample', 'print', 'read_training_data', 'read_validation_data', 'register_backward_hook', 'register_buffer', 'register_forward_hook', 'register_forward_pre_hook', 'register_full_backward_hook', 'register_full_backward_pre_hook', 'register_load_state_dict_post_hook', 'register_module', 'register_parameter', 'register_state_dict_pre_hook', 'requires_grad_', 'requires_references', 'retrieve_sentence_embedding', 'save_hyperparameters', 'set_embedding_cache', 'set_extra_state', 'set_mc_dropout', 'setup', 'share_memory', 'state_dict', 'teardown', 'test_dataloader', 'test_step', 'to', 'to_empty', 'to_onnx', 'to_torchscript', 'toggle_optimizer', 'train', 'train_dataloader', 'trainer', 'training', 'training_step', 'transfer_batch_to_device', 'type', 'unfreeze', 'unfreeze_encoder', 'untoggle_optimizer', 'val_dataloader', 'validation_step', 'xpu', 'zero_grad']
+EVALUATING CANINE-C ON EN-CS...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-cs  0.325093  ...         0.0  0.469221        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-CS...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-cs  0.311902  ...         0.0  0.453542        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-CS...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-cs  0.382389        0.0  0.544017         0.0  0.539393        0.0
+EVALUATING XLMR ON EN-CS...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p  pearson  pearson_p
+0  xlmr  en-cs  0.417045        0.0   0.58857         0.0  0.59335        0.0
+EVALUATING CANINE-C ON EN-DE...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-de  0.247508  ...         0.0  0.385005        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-DE...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-de  0.240356  ...         0.0  0.368294        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-DE...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-de  0.290715        0.0  0.421612         0.0  0.449997        0.0
+EVALUATING XLMR ON EN-DE...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-de  0.315161        0.0  0.454808         0.0  0.491531        0.0
+EVALUATING CANINE-C ON EN-FI...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-fi  0.395905  ...         0.0  0.556157        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-FI...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-fi  0.394643  ...         0.0  0.546674        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-FI...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-fi  0.459399        0.0  0.644188         0.0  0.628632        0.0
+EVALUATING XLMR ON EN-FI...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-fi  0.505738        0.0  0.698509         0.0  0.683169        0.0
+EVALUATING CANINE-C ON EN-GU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-gu  0.355071  ...         0.0  0.500733        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-GU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-gu  0.327745  ...         0.0  0.455513        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-GU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-gu  0.421824        0.0  0.594663         0.0  0.580219        0.0
+EVALUATING XLMR ON EN-GU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-gu  0.447298        0.0  0.626595         0.0  0.621735        0.0
+EVALUATING CANINE-C ON EN-KK...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-kk  0.373937  ...         0.0  0.548683        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-KK...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair  kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-kk  0.37421  ...         0.0  0.541043        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-KK...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-kk  0.425294        0.0  0.598154         0.0  0.610109        0.0
+EVALUATING XLMR ON EN-KK...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-kk  0.449073        0.0  0.627244         0.0  0.631976        0.0
+EVALUATING CANINE-C ON EN-LT...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  en-lt  0.332983  ...         0.0  0.483971        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-LT...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-lt  0.340912  ...         0.0  0.487026        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-LT...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-lt  0.423088        0.0  0.597792         0.0  0.590679        0.0
+EVALUATING XLMR ON EN-LT...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-lt  0.486224        0.0  0.677289         0.0  0.670068        0.0
+EVALUATING CANINE-C ON EN-RU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p  pearson  pearson_p
+0  canine-c  en-ru  0.382726  ...         0.0  0.59034        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-RU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  en-ru  0.372207  ...         0.0  0.594225        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-RU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-ru  0.423705        0.0   0.59451         0.0  0.607392        0.0
+EVALUATING XLMR ON EN-RU...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-ru  0.438342        0.0    0.6205         0.0  0.574028        0.0
+EVALUATING CANINE-C ON EN-ZH...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p  pearson  pearson_p
+0  canine-c  en-zh  0.245938  ...         0.0  0.36666        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON EN-ZH...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p  pearson  pearson_p
+0  canine-s  en-zh  0.247956  ...         0.0  0.36985        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON EN-ZH...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  en-zh  0.312615        0.0  0.452381         0.0  0.471906        0.0
+EVALUATING XLMR ON EN-ZH...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair  kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  en-zh  0.33679        0.0   0.48595         0.0  0.499718        0.0
+EVALUATING CANINE-C ON DE-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p  pearson  pearson_p
+0  canine-c  de-en  0.257968  ...         0.0  0.35185        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON DE-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  de-en  0.260454  ...         0.0  0.354017        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON DE-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  de-en  0.286743        0.0  0.416414         0.0  0.384366        0.0
+EVALUATING XLMR ON DE-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  de-en  0.299035        0.0  0.433298         0.0  0.402343        0.0
+EVALUATING CANINE-C ON FI-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  fi-en  0.255297  ...         0.0  0.361088        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON FI-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  fi-en  0.258497  ...         0.0  0.367763        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON FI-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  fi-en  0.285829        0.0  0.414995         0.0  0.397251        0.0
+EVALUATING XLMR ON FI-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  fi-en  0.293783        0.0  0.425225         0.0  0.409795        0.0
+EVALUATING CANINE-C ON GU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...     spearman_p   pearson      pearson_p
+0  canine-c  gu-en  0.232983  ...  3.929031e-245  0.338411  1.207508e-241
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON GU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair  kendall  ...     spearman_p   pearson      pearson_p
+0  canine-s  gu-en  0.23719  ...  4.834407e-254  0.349479  1.195380e-258
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON GU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  ...     spearman_p   pearson      pearson_p
+0  mbert  gu-en  0.255579  ...  2.270538e-295  0.374919  2.010004e-300
+
+[1 rows x 8 columns]
+EVALUATING XLMR ON GU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  gu-en  0.267047        0.0  0.386787         0.0  0.394242        0.0
+EVALUATING CANINE-C ON KK-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...     spearman_p   pearson      pearson_p
+0  canine-c  kk-en  0.300371  ...  7.281909e-307  0.438386  6.491798e-317
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON KK-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair  kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  kk-en  0.31165  ...         0.0  0.453571        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON KK-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  kk-en  0.342897        0.0  0.490394         0.0  0.488906        0.0
+EVALUATING XLMR ON KK-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  kk-en  0.346804        0.0  0.494665         0.0  0.496541        0.0
+EVALUATING CANINE-C ON LT-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  lt-en  0.283539  ...         0.0  0.449651        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON LT-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p   pearson  pearson_p
+0  canine-s  lt-en  0.283685  ...         0.0  0.447239        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON LT-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  lt-en  0.326179        0.0  0.469314         0.0  0.484142        0.0
+EVALUATING XLMR ON LT-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  lt-en  0.325778        0.0  0.469859         0.0  0.475728        0.0
+EVALUATING CANINE-C ON RU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair  kendall  ...  spearman_p   pearson  pearson_p
+0  canine-c  ru-en  0.22721  ...         0.0  0.325829        0.0
+
+[1 rows x 8 columns]
+EVALUATING CANINE-S ON RU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+      model   pair   kendall  ...  spearman_p  pearson  pearson_p
+0  canine-s  ru-en  0.228734  ...         0.0  0.33168        0.0
+
+[1 rows x 8 columns]
+EVALUATING MBERT ON RU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+   model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  mbert  ru-en  0.247971        0.0  0.361652         0.0  0.343247        0.0
+EVALUATING XLMR ON RU-EN...
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:28: DeprecationWarning: Please use `kendalltau` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  kendall = stats.kendalltau(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:29: DeprecationWarning: Please use `spearmanr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  spearman = stats.spearmanr(preds, target)
+/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py:30: DeprecationWarning: Please use `pearsonr` from the `scipy.stats` namespace, the `scipy.stats.stats` namespace is deprecated.
+  pearson = stats.pearsonr(preds, target)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  model   pair   kendall  kendall_p  spearman  spearman_p   pearson  pearson_p
+0  xlmr  ru-en  0.250505        0.0  0.364627         0.0  0.343179        0.0
+EVALUATING CANINE-C ON ZH-EN...
+Traceback (most recent call last):
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py", line 64, in <module>
+    pair_results = compute_correlations(model, pair_dataset)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py", line 22, in compute_correlations
+    comet_scores = compute_comet(model, data)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/eval_models.py", line 17, in compute_comet
+    model_output = model.predict(data, batch_size=32, gpus=1, progress_bar=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/models/base.py", line 636, in predict
+    predictions = trainer.predict(
+                  ^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 852, in predict
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 43, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 894, in _predict_impl
+    results = self._run(model, ckpt_path=ckpt_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 1018, in _run_stage
+    return self.predict_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/loops/utilities.py", line 181, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/loops/prediction_loop.py", line 112, in run
+    self._predict_step(batch, batch_idx, dataloader_idx)
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/loops/prediction_loop.py", line 229, in _predict_step
+    predictions = call._call_strategy_hook(trainer, "predict_step", *step_kwargs.values())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 294, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/pytorch_lightning/strategies/strategy.py", line 413, in predict_step
+    return self.model.predict_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/models/base.py", line 439, in predict_step
+    model_outputs = Prediction(scores=self(**batch).score)
+                                      ^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/models/regression/regression_metric.py", line 300, in forward
+    mt_sentemb = self.get_sentence_embedding(mt_input_ids, mt_attention_mask)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/models/base.py", line 280, in get_sentence_embedding
+    return self.compute_sentence_embedding(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/models/base.py", line 318, in compute_sentence_embedding
+    encoder_out = self.encoder(
+                  ^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/COMEbyT5/comet/encoders/canine.py", line 161, in forward
+    last_hidden_states, pooler_output, all_layers = self.model(
+                                                    ^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/transformers/models/canine/modeling_canine.py", line 1224, in forward
+    final_chars_encoder_outputs = self.final_char_encoder(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/transformers/models/canine/modeling_canine.py", line 812, in forward
+    layer_outputs = layer_module(hidden_states, attention_mask, layer_head_mask, output_attentions)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/transformers/models/canine/modeling_canine.py", line 725, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/transformers/models/canine/modeling_canine.py", line 594, in forward
+    self_outputs = self.self(hidden_states, hidden_states, attention_mask, head_mask, output_attentions)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/silenos/silenos1/nlp/projekty/mtlowre/virtualenvs/unbabel-comet-EvlBUkzr-py3.11/lib/python3.11/site-packages/transformers/models/canine/modeling_canine.py", line 468, in forward
+    attention_scores = attention_scores / math.sqrt(self.attention_head_size)
+                       ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.03 GiB. GPU 0 has a total capacty of 14.58 GiB of which 40.50 MiB is free. Including non-PyTorch memory, this process has 14.54 GiB memory in use. Of the allocated memory 13.13 GiB is allocated by PyTorch, and 1.27 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

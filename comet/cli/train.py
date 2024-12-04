@@ -28,9 +28,14 @@ For more details run the following command:
     comet-train --help
 ```
 """
+import os
 import json
+import time
+import torch
+import random
 import logging
 import warnings
+import subprocess
 
 from jsonargparse import ActionConfigFile, ArgumentParser, namespace_to_dict
 from pytorch_lightning import seed_everything
@@ -40,6 +45,7 @@ from pytorch_lightning.callbacks import (
     ModelCheckpoint,
 )
 from pytorch_lightning.trainer.trainer import Trainer
+from pytorch_lightning.loggers import TensorBoardLogger
 
 from comet.models import (
     RankingMetric,
@@ -81,7 +87,6 @@ def read_arguments() -> ArgumentParser:
     )
     return parser
 
-
 def initialize_trainer(configs) -> Trainer:
     checkpoint_callback = ModelCheckpoint(
         **namespace_to_dict(configs.model_checkpoint.init_args)
@@ -92,9 +97,16 @@ def initialize_trainer(configs) -> Trainer:
     trainer_args = namespace_to_dict(configs.trainer.init_args)
     lr_monitor = LearningRateMonitor(logging_interval="step")
     trainer_args["callbacks"] = [early_stop_callback, checkpoint_callback, lr_monitor]
+    ### ADDED TENSORBOARD LOGGING
+    save_dir = checkpoint_callback.dirpath
+    if not os.path.exists(save_dir):
+        os.mkdir(save_dir)
+    logger = TensorBoardLogger(save_dir=save_dir, name='tensorboard')
+    del trainer_args['logger'] # remove default logger from configs
+    ### END ADDITION
     print("TRAINER ARGUMENTS: ")
     print(json.dumps(trainer_args, indent=4, default=lambda x: x.__dict__))
-    trainer = Trainer(**trainer_args)
+    trainer = Trainer(**trainer_args, logger=logger)
     return trainer
 
 
@@ -189,6 +201,11 @@ def train_command() -> None:
         category=UserWarning,
         message=".*Consider increasing the value of the `num_workers` argument` .*",
     )
+    ### ADDED TensorBoard
+    #launch tensorboard on random port
+    #random.seed(time.monotonic_ns())
+    #subprocess.Popen(['tensorboard', f'--logdir={trainer.logger.save_dir}/tensorboard', '--host=localhost', f'--port={random.randint(1000,9999)}'])
+    ###
     trainer.fit(model)
 
 

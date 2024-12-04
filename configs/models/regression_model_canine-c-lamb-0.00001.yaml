@@ -1,0 +1,30 @@
+regression_metric:
+  class_path: comet.models.RegressionMetric
+  init_args:
+    nr_frozen_epochs: 0
+    keep_embeddings_frozen: True
+    optimizer: Lamb
+    encoder_learning_rate: 0.00001
+    learning_rate: 0.00001
+    layerwise_decay: 1
+    encoder_model: Canine
+    pretrained_model: google/canine-c
+    pool: avg
+    layer: 16
+    layer_transformation: sparsemax
+    layer_norm: False
+    loss: mse
+    dropout: 0.1
+    batch_size: 8
+    train_data: 
+      - data/1718-da.csv
+    validation_data: 
+      - data/wmt-2019-da.csv
+    hidden_sizes:
+      - 1536
+      - 768
+    activations: Tanh
+    
+trainer: ../canine-c_trainer-lamb.yaml
+early_stopping: ../early_stopping.yaml
+model_checkpoint: ../canine-c_model_checkpoint-lamb-0.00001.yaml

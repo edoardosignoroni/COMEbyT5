@@ -25,7 +25,7 @@ from transformers import BertConfig, BertModel, BertTokenizerFast
 from comet.encoders.base import Encoder
 
 
-class BERTEncoder(Encoder):
+class MBertEncoderForMetric(Encoder):
     """BERT encoder.
 
     Args:
@@ -97,7 +97,7 @@ class BERTEncoder(Encoder):
         Returns:
             Encoder: XLMREncoder object.
         """
-        return BERTEncoder(pretrained_model, load_pretrained_weights)
+        return MBertEncoderForMetric(pretrained_model, load_pretrained_weights)
 
     def freeze_embeddings(self) -> None:
         """Frezees the embedding layer."""

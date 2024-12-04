@@ -20,12 +20,12 @@ BERT Encoder
 from typing import Dict, Optional
 
 import torch
-from transformers import BertConfig, BertModel, BertTokenizerFast
+from transformers import AutoTokenizer, AutoModel, AutoConfig
 
 from comet.encoders.base import Encoder
 
 
-class BERTEncoder(Encoder):
+class CharBERTEncoder(Encoder):
     """BERT encoder.
 
     Args:
@@ -38,16 +38,16 @@ class BERTEncoder(Encoder):
         self, pretrained_model: str, load_pretrained_weights: bool = True
     ) -> None:
         super().__init__()
-        self.tokenizer = BertTokenizerFast.from_pretrained(
+        self.tokenizer = AutoTokenizer.from_pretrained(
             pretrained_model, use_fast=True
         )
         if load_pretrained_weights:
-            self.model = BertModel.from_pretrained(
+            self.model = AutoModel.from_pretrained(
                 pretrained_model, add_pooling_layer=False
             )
         else:
-            self.model = BertModel(
-                BertConfig.from_pretrained(pretrained_model), add_pooling_layer=False
+            self.model = AutoModel(
+                AutoConfig.from_pretrained(pretrained_model), add_pooling_layer=False
             )
         self.model.encoder.output_hidden_states = True
 
@@ -97,7 +97,7 @@ class BERTEncoder(Encoder):
         Returns:
             Encoder: XLMREncoder object.
         """
-        return BERTEncoder(pretrained_model, load_pretrained_weights)
+        return CharBERTEncoder(pretrained_model, load_pretrained_weights)
 
     def freeze_embeddings(self) -> None:
         """Frezees the embedding layer."""

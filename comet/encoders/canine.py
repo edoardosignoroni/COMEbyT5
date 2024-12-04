@@ -13,20 +13,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 r"""
-BERT Encoder
+CANINE Encoder
 ==============
-    Pretrained BERT encoder from Hugging Face.
+    Pretrained Canine encoder from Hugging Face.
 """
 from typing import Dict, Optional
 
 import torch
-from transformers import BertConfig, BertModel, BertTokenizerFast
+from transformers import CanineTokenizer, CanineModel, CanineConfig
 
 from comet.encoders.base import Encoder
 
 
-class BERTEncoder(Encoder):
-    """BERT encoder.
+class CanineEncoderForMetric(Encoder):
+    """Canine encoder.
 
     Args:
         pretrained_model (str): Pretrained model from hugging face.
@@ -38,16 +38,16 @@ class BERTEncoder(Encoder):
         self, pretrained_model: str, load_pretrained_weights: bool = True
     ) -> None:
         super().__init__()
-        self.tokenizer = BertTokenizerFast.from_pretrained(
+        self.tokenizer = CanineTokenizer.from_pretrained(
             pretrained_model, use_fast=True
         )
         if load_pretrained_weights:
-            self.model = BertModel.from_pretrained(
+            self.model = CanineModel.from_pretrained(
                 pretrained_model, add_pooling_layer=False
             )
         else:
-            self.model = BertModel(
-                BertConfig.from_pretrained(pretrained_model), add_pooling_layer=False
+            self.model = CanineModel(
+                CanineConfig.from_pretrained(pretrained_model), add_pooling_layer=False
             )
         self.model.encoder.output_hidden_states = True
 
@@ -64,12 +64,12 @@ class BERTEncoder(Encoder):
     @property
     def num_layers(self) -> int:
         """Number of model layers available."""
-        return self.model.config.num_hidden_layers + 1
+        return self.model.config.num_hidden_layers + 5
 
     @property
     def size_separator(self) -> int:
         """Size of the seperator.
-        E.g: For BERT is just 1 ([SEP]) but models such as XLM-R use 2 (</s></s>).
+        E.g: For Canine is just 1 ([SEP]) but models such as XLM-R use 2 (</s></s>).
 
         Returns:
             int: Number of tokens used between two segments.
@@ -81,7 +81,7 @@ class BERTEncoder(Encoder):
         """Whether or not the model uses token type ids to differentiate sentences.
 
         Returns:
-            bool: True for models that use token_type_ids such as BERT.
+            bool: True for models that use token_type_ids such as Canine.
         """
         return True
 
@@ -97,12 +97,14 @@ class BERTEncoder(Encoder):
         Returns:
             Encoder: XLMREncoder object.
         """
-        return BERTEncoder(pretrained_model, load_pretrained_weights)
+        return CanineEncoderForMetric(pretrained_model, load_pretrained_weights)
 
     def freeze_embeddings(self) -> None:
         """Frezees the embedding layer."""
-        for param in self.model.embeddings.parameters():
-            param.requires_grad = False
+        # Make this into pass to unfreeze everything > to check for vocab embeddings unfreezing 
+        # for param in self.model.char_embeddings.parameters():
+        #     param.requires_grad = False
+        pass
 
     def layerwise_lr(self, lr: float, decay: float):
         """Calculates the learning rate for each layer by applying a small decay.
@@ -114,7 +116,7 @@ class BERTEncoder(Encoder):
         Returns:
             list: List of model parameters for all layers and the corresponding lr.
         """
-        # # Last layer keeps LR
+        # Last layer keeps LR
         # opt_parameters = [
         #     {
         #         "params": self.model.encoder.layer[-1].parameters(),
@@ -132,12 +134,13 @@ class BERTEncoder(Encoder):
         # # Embedding Layer
         # opt_parameters.append(
         #     {
-        #         "params": self.model.embeddings.parameters(),
+        #         "params": self.model.char_embeddings.parameters(),
         #         "lr": lr * decay ** (self.num_layers),
         #     }
         # )
+        # #return opt_parameters
         return [{ "params": self.model.parameters(), "lr": lr }]
-
+    
     def forward(
         self,
         input_ids: torch.Tensor,
@@ -145,7 +148,7 @@ class BERTEncoder(Encoder):
         token_type_ids: Optional[torch.tensor] = None,
         **kwargs
     ) -> Dict[str, torch.Tensor]:
-        """BERT model forward
+        """Canine model forward
 
         Args:
             input_ids (torch.Tensor): tokenized batch.
